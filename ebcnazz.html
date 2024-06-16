@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dica 7!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">DICA 1, FASE 7</h1>
+    <h1>E-M-I</h1>
+    <br>
+    <h1>P-C-D</h1>
+    <br>
+    <h1>D-N-C-A-E</h1>
+    <br>
+    <h1>O-L = 3,14159265358979323846</h1>
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem7()">
+    </div>
+    <script>
+    function imagem7(){
+        var validar = document.getElementById("validar").value.trim();
+        var team = new URLSearchParams(window.location.search).get("team");
+        let valor = Array.from("dividido", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+        let valores = Array.from("candidatura", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+        if(validar == valor){
+            window.location.href = "rbxbtht.html?team=" + encodeURIComponent(team);
+        } else if(validar == valores){
+            window.location.href = "gnrnfee.html?team=" + encodeURIComponent(team);
+        }else{
+            alert("Senha Incorreta!");
+            return;
+        }
+    }
+    </script>
+</body>
+</html>

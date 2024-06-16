@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Regras do Caça</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <h1 class="titulo">Bem Vindo ao Caça da XLV Grande gincana equipe <span id="nomeEquipe"></span></h1>
+    <script src="js/equipe.js"></script>
+    <h1>Prestem atenção!! Estas regras não serão reforçadas pela coggga! </h1>
+    <br><br>
+    <h1>Regras</h1>
+    <div class="textHome">
+        <p>1. Fotos só podem ser mostradas em sequência com intervalo de 5 minutos</p>
+        <p>2. Foto deve conter, rosto, camiseta, bicicleta e lugar</p>
+        <p>3. As dicas serão disponibilizadas de 30 em 30 minutos, se comprometam para contar, nós não avisaremos!</p>
+        <p>4. Cada bancada poderá ter entre 4 e 8 integrantes!</p>
+    </div>
+    <div class="informacao">
+        <input type="submit" class="botao" value="Começar" onclick="verificarResposta()">
+    </div>
+    <script>
+        function verificarResposta(){
+            var team = new URLSearchParams(window.location.search).get("team");
+            window.location.href = "fase1.html?team=" + encodeURIComponent(team);
+        }
+    </script>
+</body>
+</html>

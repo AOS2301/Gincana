@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fase 6!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">FASE 6!</h1>
+    <p class="textLongo"> Numa época antiga, quando os deuses caminhavam entre os mortais, Hermes, <br>o mensageiro divino, observava atentamente os jogos e competições dos humanos.</p>
+    <p class="textLongo"> Fascinado pela dedicação dos atletas, Hermes decidiu <b>deslizar</b> até o Olimpo para caminhar entre eles. <br>Com suas <b>sandálias aladas</b>, sua astúcia e velocidade lendárias, ele ajudava os atletas <br>que buscavam sua proteção e orientação.</p>   
+    <p class="textLongo"> Os jogos se tornaram sagrados, e os <b>atletas</b> juravam lealdade a Hermes, o patrono divino do esporte. <br>Em sua homenagem, estátuas foram erguidas e templos foram construídos. <br>E assim, a tradição dos jogos e competições esportivas <br>foi abençoada pelo toque divino de Hermes, por mais de 384 anos.</p>
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem6()">
+    </div>
+    <script>
+        function imagem6(){
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("qualidade", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            let valores = Array.from("amida", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "eaxbsum.html?team=" + encodeURIComponent(team);
+            } else if(validar == valores){
+                window.location.href = "badqyjt.html?team=" + encodeURIComponent(team);
+            }
+            else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <title>Fase 2!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script>
+        function playAudio() {
+            let x = document.getElementById("myAudio");
+            x.play();
+        }
+        function pauseAudio() {
+            let x = document.getElementById("myAudio");
+            x.pause();
+        }       
+    </script>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">FASE 2!</h1>
+    <audio class="audio" id="myAudio" controls>
+        <source src="img/caça.mp3" type="audio/mpeg">
+        Seu navegador não possui suporte ao elemento audio
+    </audio>
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem2()">
+    </div> 
+    <script>  
+        function imagem2(){    
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("titularidade", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            let valores = Array.from("alimentador", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "fase3.html?team=" + encodeURIComponent(team);
+            } else if(validar == valores){
+                window.location.href = "dica2_1.html?team=" + encodeURIComponent(team);
+            } else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

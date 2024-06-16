@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <title>Fase 1!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">FASE 1!</h1>
+    <p class="textFase">Flores representam Ivoti, porém, as rosas escondem algum segredo…</p>
+    <img src="img/flor.jpg">
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem1()">
+    </div>
+    <script>
+        function imagem1(){
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("capiau", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            let valores = Array.from("frango", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "fase2.html?team=" + encodeURIComponent(team);
+            }else if(validar == valores){
+                window.location.href = "dica1_1.html?team=" + encodeURIComponent(team);
+            } else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

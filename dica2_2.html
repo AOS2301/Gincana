@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <title>Dica 2!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">DICA 2, FASE 2</h1>
+    <br><br><br><br><br><br><br><br><br>
+    <p class="textHome">NENHUM ATO DE GENTILEZA É COISA EM VÃO. NÃO PODEMOS JULGAR A IMPORTÂNCIA DE UM FAVOR, PELA APARÊNCIA DO BENFEITOR </p>
+    <h1>💪💪</h1>
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem2()">
+    </div>
+    <script>
+        function imagem2(){
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("titularidade", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "fase3.html?team=" + encodeURIComponent(team);
+            } else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

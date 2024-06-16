@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fase 3!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">FASE 3!</h1>
+    <p class="textFase">Jnsnlj Pzwajs ebnxhmjs ajwxhmnjijsjs Gjwljs bjwijs szw ez jnsjr pqjnsjs Mnsijwsnx, bjss inj Mnslfgj ptsxyfsy nxy</p>
+    <img src="img/chave.png">
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem3()">
+    </div> 
+    <script>
+        function imagem3(){
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("lado", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            let valores = Array.from("bastante", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "kgmxtax.html?team=" + encodeURIComponent(team);
+            } else if(validar == valores){
+                window.location.href = "qivghia.html?team=" + encodeURIComponent(team);
+            }else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fase 4!</title>
+</head>
+<body>
+    <div id="banner"></div>
+    <script src="js/equipe.js"></script>
+    <h1 class="titulo">FASE 4!</h1>
+    <img src="img/br.PNG">
+    <div class="informacao">
+        <input type="text" class="senha" id="validar">
+        <input type="submit" class="fase" value="VERIFICAR" onclick="imagem4()">
+    </div>
+    <script>
+        function imagem4(){
+            var validar = document.getElementById("validar").value.trim();
+            var team = new URLSearchParams(window.location.search).get("team");
+            let valor = Array.from("embrulhada", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            let valores = Array.from("escova", c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            if(validar == valor){
+                window.location.href = "rysogew.html?team=" + encodeURIComponent(team);
+            } else if(validar == valores){
+                window.location.href = "vqyiknd.html?team=" + encodeURIComponent(team);
+            } else{
+                alert("Senha Incorreta!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
